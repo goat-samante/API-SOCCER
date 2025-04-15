@@ -19,6 +19,19 @@ struct ContentView: View {
     }
 }
 
+struct CompetitionsReponse: Decodable {
+    let competitions: [Competition]
+}
+struct Competition: Decodable, Identifiable {
+    let id: Int
+    let name: String
+    let area: Area
+}
+
+struct Area: Decodable {
+    let name: String
+}
+
 #Preview {
     ContentView()
 }
